@@ -1,9 +1,13 @@
+#!/usr/bin/env python
+
 import os
 import platform
+import subprocess
 import re
 import fnmatch
 import glob
 from pathlib import Path
+from pyicloud import PyiCloudService
 
 
 #################### Start Find OS ####################
@@ -11,6 +15,18 @@ from pathlib import Path
 # TODO
 
 #################### End Find OS ####################
+
+#################### Start Run Command ####################
+
+def run_xcode_install():
+
+    cmd_str = ""
+    subprocess.run(cmd_str, shell=True)
+
+
+run_xcode_install()
+
+#################### End Run Command ####################
 
 #################### Start Download Required Files for OS ####################
 
@@ -42,4 +58,3 @@ from pathlib import Path
 # TODO
 
 #################### End Open / Install CMD Line ####################
-
